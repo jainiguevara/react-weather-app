@@ -1,33 +1,218 @@
-.App {
-  text-align: center;
+:root {
+  font: 16px 'Roboto', sans-serif;
+  color: #757575;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0px;
 }
-
-.App-header {
-  background-color: #282c34;
+ 
+.container {
   min-height: 100vh;
+  max-width: 1024px;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
+  /* box-sizing: border-box; */
+  /* justify-content: flex-end; */
+}
+
+.weather-app {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.temp-button {
+  cursor: pointer;
+  color: green;
+}
+
+
+/*
+
+CURRENT WEATHER
+
+*/
+
+.current-weather {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  max-height: 200px;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.current-weather .header {
+  font-size: 34px
+} 
+
+.current-weather .subtitle {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.current-weather .forecast {
+  display: flex;
+  margin: 0;
   align-items: center;
+}
+
+.current-weather .weather {
+  font-size: 50px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.current-weather .temp {
+  font-size: 80px;
+  font-weight: 400;
+  color: black;
+  display: flex;
+  vertical-align: top;
+}
+
+.current-weather .temp sup {
+  font-size: 24px;
+  font-weight: 400;
+  color: black;
+}
+
+/*  */
+
+/*
+
+WEATHER FORECAST
+
+*/
+
+.weather-forecast{
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-forecast .condition {
+  font-size: 50px;
+}
+
+.weather-forecast .forecast {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-height: 120px;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.weather-forecast .forecast:hover {
+  background-color: #fafafa
+}
+
+.weather-forecast .focused {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-height: 120px;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #fafafa;
+  border: solid 2px #eeeeee;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+/* */
+
+
+/*
+
+FILTERS
+
+*/
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #424242;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.select-filter {
+  font-size: 12px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.select-filter div {
+  margin-bottom: 2px;
+  color: #fafafa;
+}
+
+.select-filter select {
+  display: block;
+  font: 12px 'Roboto', sans-serif;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: #fafafa;
+  padding: 5px;
+  height: 30px;
+  width: 150px;
+}
+
+/* */ 
+
+@media (min-width: 700px) {
+
+.weather-forecast {
+  display: flex;
+  flex-direction: row
+}
+
+.weather-forecast .focused {
+  width: 20%;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.weather-forecast .forecast {
+  width: 20%;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.select-filter div {
+  margin-bottom: 2px;
+  color: #fafafa;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select-filter select {
+  display: block;
+  font: 16px 'Roboto', sans-serif;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: #fafafa;
+  padding: 10px;
+  height: 40px;
+  width: 250px;
+}
+
 }
