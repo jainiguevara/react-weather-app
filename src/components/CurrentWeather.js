@@ -3,19 +3,21 @@ import React, { useContext } from 'react';
 import { WeatherContext } from './../contexts/WeatherContext';
 
 const CurrentWeather = () => {
-  const { weather, tempType, handleTempTypeChange } = useContext(WeatherContext);
+  const { weather, forecast, tempType, handleTempTypeChange } = useContext(WeatherContext);
   
-  if (!weather) {
+  if (!weather && forecast.length === 0) {
     return (<div>Loading...</div>)
   }
 
   const {
+    name,
     date,
     description,
     celsius,
     fahrenheit,
-    icon
-  } = weather.display;
+    icon,
+    alt,
+  } = weather;
 
   const renderTempDisplay = () => {
     if (tempType === 'C') {
@@ -40,12 +42,12 @@ const CurrentWeather = () => {
 
   return (
     <div className="current-weather">
-      <div className="header">{weather.name}</div>
+      <div className="header">{name}</div>
       <div className="subtitle">{date}</div>
       <div className="subtitle">{description}</div>
       <div className="forecast">
         <div className="weather">
-          <img src={icon} alt="test" />
+          <img src={icon} alt={alt} />
         </div>
         {renderTempDisplay()}
       </div>
