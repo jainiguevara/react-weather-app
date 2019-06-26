@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import { WeatherContext } from './../contexts/WeatherContext';
 import SelectFilter from './SelectFilter';
 
 const city = [
@@ -10,18 +11,12 @@ const city = [
   { name: 'Paris' },
 ]
 
-const weather = [
-  { name: 'Cloudy' },
-  { name: 'Rainy' },
-  { name: 'Sunny' },
-  { name: 'Thunder Storms' },
-]
-
 const Filters = props => {
+  const { weatherTypeList, handleSelectCity, handleSelectWeatherType } = useContext(WeatherContext);
   return (
     <div className="filters">
-      <SelectFilter name='City' data={city} />
-      <SelectFilter name='Weather Type' data={weather} />
+      <SelectFilter name='City' handleOnChange={handleSelectCity} data={city} />
+      <SelectFilter name='Weather Type' handleOnChange={handleSelectWeatherType} data={weatherTypeList} />
     </div>
   );
 };

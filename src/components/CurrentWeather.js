@@ -6,7 +6,7 @@ const CurrentWeather = () => {
   const { weather, forecast, tempType, handleTempTypeChange } = useContext(WeatherContext);
   
   if (!weather && forecast.length === 0) {
-    return (<div>Loading...</div>)
+    return (<div>Loading Current Weather...</div>)
   }
 
   const {
