@@ -63,6 +63,7 @@ const WeatherProvider = props => {
         })
 
     })
+    .catch(error => console.log(error))
   }, [currentCity])
 
   // 
