@@ -28,8 +28,6 @@ Common component to be used for rendering a customer drop down list. It requires
   - data: values of the drop down list
   - handleOnChange: event being called for onChange.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Utilies and Styling
 
 ### /api.js
@@ -37,6 +35,11 @@ Utility to handle all fetch call from the API.
 
 ### /App.css
 Containter for all the classes for styling the application
+
+### -----
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
