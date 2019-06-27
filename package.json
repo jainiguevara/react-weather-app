@@ -1,7 +1,9 @@
 {
   "name": "react-weather-app",
   "version": "0.1.0",
-  "proxy": "https://api.openweathermap.org/data/2.5",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -16,16 +18,5 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
