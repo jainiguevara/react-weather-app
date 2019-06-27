@@ -9,6 +9,7 @@ const WeatherForecast = () => {
     return (<div>Loading Forecast...</div>)
   }
 
+  // Renders max and min temperatures in the list
   const renderTemperature = ({
     celsiusMax, celsiusMin, fahrenheitMax, fahrenheitMin
   }) => {
@@ -18,6 +19,8 @@ const WeatherForecast = () => {
     return <div className="temp"><b>{fahrenheitMax}°</b> {fahrenheitMin}°</div>
   }
 
+  // Function to select the weather and displays
+  // into the Current Weather component
   const handleClick = dt => {
     handleSelectForecast(dt);
   }

@@ -1,8 +1,11 @@
 import React from 'react';
 
-const SelectFIlter = props => {
+// Common component for the drop down list
+const SelectFilter = props => {
   const { name, data, handleOnChange } = props;
 
+  // Calls handleOnChange based on what function
+  // Filter.js passed to this property
   const onChange = e => {
     handleOnChange(e.target.value)
   }
@@ -17,4 +20,4 @@ const SelectFIlter = props => {
   );
 };
 
-export default SelectFIlter;
+export default SelectFilter;

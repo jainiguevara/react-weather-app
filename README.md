@@ -1,4 +1,42 @@
+## Application Information (by: Jaini Guevara - jaini.guevara@gmail.com)
+
+## API Configuration
+Update the **APIID** variable inside **/api.js** to change API Keys for the API.
+
+## Context/s:
+
+### /context/WeatherContext.js
+Contains all states and functions being used by the application. App.js used the WeatherProvide to wrap the WeatherApp component in order for the application to consume the context.
+
+## Components:
+
+### /components/WeatherApp.js
+Component to render **CurrentWeather** and **WeatherForecast** components. Consumes **WeatherContext**'s error state to check and render an error message if the are network problems in the API.
+
+### /components/CurrentWeather.js
+Displays the current or selected weather information. Consumes the **WeatherContext** to populate the city, date, weather, temperature and temperature type. It also consumes the event called **handleTempTypeChange** to switch between Celsius and Fahrenheit.
+
+### /components/WeatherForecast.js
+Displays the 5-day weather forcast for the current or selected city. Consumes the **WeatherContext** to populate the day of week, weather, temperatures and temperature types. It also consumes the event called **handleSelectForecast** to select the forecast and display into the **CurrentWeather** component. It used the **focused** state to style the current selected weather forecast. 
+
+### /components/Filter.js
+Container for City and Weather Type filters. Consumes **WeatherContext** to get the list of cities and weather types. As well as the **handleSelectCity** and **handleSelectWeatherType** events. These states and functions will be passed to **SelectFilter** component properties.
+
+### /components/SelectFilter.js
+Common component to be used for rendering a customer drop down list. It requires the following properties:
+  - name: Used for the label of drop down
+  - data: values of the drop down list
+  - handleOnChange: event being called for onChange.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Utilies and Styling
+
+### /api.js
+Utility to handle all fetch call from the API.
+
+### /App.css
+Containter for all the classes for styling the application
 
 ## Available Scripts
 

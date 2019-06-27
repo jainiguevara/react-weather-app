@@ -5,6 +5,7 @@ import { WeatherContext } from './../contexts/WeatherContext';
 const CurrentWeather = () => {
   const { weather, forecast, tempType, handleTempTypeChange } = useContext(WeatherContext);
   
+  // Render a loading message while waiting for API response
   if (!weather && forecast.length === 0) {
     return (<div>Loading Current Weather...</div>)
   }
@@ -19,6 +20,7 @@ const CurrentWeather = () => {
     alt,
   } = weather;
 
+  // Renders the Temperature display and its corresponding onClick for wheather type change
   const renderTempDisplay = () => {
     if (tempType === 'C') {
       return (
@@ -41,7 +43,7 @@ const CurrentWeather = () => {
   }
 
   return (
-    <div className="current-weather">
+    <div data-testid="current-weather" className="current-weather">
       <div className="header">{name}</div>
       <div className="subtitle">{date}</div>
       <div className="subtitle">{description}</div>
