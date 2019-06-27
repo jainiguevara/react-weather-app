@@ -1,4 +1,4 @@
-## Application Information (by: Jaini Guevara - jaini.guevara@gmail.com)
+## Application Information (by: Jaini Guevara)
 
 ## API Configuration
 Update the **APIID** variable inside **/api.js** to change API Keys for the API.
